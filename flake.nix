@@ -108,6 +108,6 @@
     };
 
     # Default formatter for the entire repo
-    formatter.${system} = pkgs.${system}.alejandra;
+    #formatter.${system} = pkgs.${system}.alejandra;
   };
 }
