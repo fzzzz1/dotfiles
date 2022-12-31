@@ -20,7 +20,7 @@
   in {
     colors = normal ++ bright;
     font = "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
-    keyMap = "us";
+    keyMap = "uk";
   };
 
   environment = {
@@ -32,6 +32,7 @@
       gcc
       git
       hddtemp
+      mbpfan
       jq
       lm_sensors
       lz4

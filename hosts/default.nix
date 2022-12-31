@@ -9,7 +9,7 @@ inputs: let
         useGlobalPkgs = true;
         useUserPackages = true;
         extraSpecialArgs = {inherit inputs self;};
-        users.rxyhn = ../home/rxyhn;
+        users.fz = ../home/fz;
       };
     }
   ];
