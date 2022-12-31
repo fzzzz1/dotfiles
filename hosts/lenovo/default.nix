@@ -11,7 +11,7 @@
 
     # Shared configuration across all machines
     ../shared
-    ../shared/users/rxyhn.nix
+    ../shared/users/fz.nix
   ];
 
   boot = {
@@ -105,7 +105,7 @@
       settings = rec {
         initial_session = {
           command = "Hyprland";
-          user = "rxyhn";
+          user = "fz";
         };
         default_session = initial_session;
       };
@@ -129,7 +129,7 @@
   };
 
   # enable hyprland
-  programs.hyprland.nvidiaPatches = true;
+  programs.hyprland.nvidiaPatches = false;
 
   security = {
     pam.services.swaylock = {
@@ -142,6 +142,7 @@
   environment = {
     systemPackages = with pkgs; [
       acpi
+      mbpfan
       brightnessctl
       cudaPackages_11.cudatoolkit
       cudaPackages_11.cudnn
@@ -174,12 +175,12 @@
 
     docker = {
       enable = true;
-      enableNvidia = true;
+      enableNvidia = false;
     };
 
     podman = {
       enable = true;
-      enableNvidia = true;
+      enableNvidia = false;
       extraPackages = with pkgs; [
         skopeo
         conmon
